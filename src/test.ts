@@ -5,7 +5,12 @@ style.color('red')('red text');
 style.color('green')('green text');
 style.color('blue')('blue text');
 console.log('\nall colors:');
-const isColor = name => fontColors.hasOwnProperty(name);
+declare global {
+    interface ObjectConstructor {
+        keys<T extends string>(o: { [key in T]: string }): T[]
+    }
+}
+const isColor = (name: string) => fontColors.hasOwnProperty(name);
 const colorList = Object.keys(fontColors).filter(isColor);
 console.log(
     Array.from('Message of all colors')

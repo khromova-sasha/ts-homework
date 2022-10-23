@@ -1,4 +1,4 @@
-export const Reset = '\x1b[0m';
+export const Reset: string = '\x1b[0m';
 export const effects = {
     bright: '\x1b[1m',
     dim: '\x1b[2m',
@@ -16,7 +16,7 @@ export const fontColors = {
     cyan: '\x1b[36m',
     white: '\x1b[37m',
 };
-export const colors = ['black', 'blue', 'cyan', 'green', 'magenta', 'red', 'white', 'yellow'];
+export const colors: ('black' | 'blue' | 'cyan' | 'green' | 'magenta' | 'red' | 'white' | 'yellow')[] = ['black', 'blue', 'cyan', 'green', 'magenta', 'red', 'white', 'yellow'];
 export const backgroundColors = {
     black: '\x1b[40m',
     red: '\x1b[41m',
@@ -27,7 +27,16 @@ export const backgroundColors = {
     cyan: '\x1b[46m',
     white: '\x1b[47m',
 };
-export const contrast = {
+export const contrast: {
+    black: 'black' | 'white';
+    red: 'black' | 'white';
+    green: 'black' | 'white';
+    yellow: 'black' | 'white';
+    blue: 'black' | 'white';
+    magenta: 'black' | 'white';
+    cyan: 'black' | 'white';
+    white: 'black' | 'white';
+} = {
     black: 'white',
     red: 'black',
     green: 'black',
